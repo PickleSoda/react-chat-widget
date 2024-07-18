@@ -41,12 +41,11 @@ export default class App extends Component {
   render() {
     return (
       <Widget
-        title="Bienvenido"
-        subtitle="Asistente virtual"
-        senderPlaceHolder="Escribe aquí ..."
+        title="Garcho"
+        subtitle="Ai assistant"
+        senderPlaceHolder="Enter your message..."
         handleNewUserMessage={this.handleNewUserMessage}
         handleQuickButtonClicked={this.handleQuickButtonClicked}
-        disableRichTextInput={true}
         imagePreview
         handleSubmit={this.handleSubmit}
         disableInput={true}
