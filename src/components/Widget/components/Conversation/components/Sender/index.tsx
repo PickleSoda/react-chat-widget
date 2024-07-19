@@ -9,6 +9,10 @@ const send = require('../../../../../../../assets/send_button.svg') as string;
 const emoji = require('../../../../../../../assets/icon-smiley.svg') as string;
 const brRegex = /<br>/g;
 
+import {
+  MoodSVGIcon, SendSVGIcon
+} from "@react-md/material-icons";
+
 import './style.scss';
 
 type Props = {
@@ -138,12 +142,14 @@ function Sender({ sendMessage, placeholder, disabledInput, autofocus, onTextInpu
           />
 
         </div>
-        <button className='rcw-picker-btn' type="submit" onClick={handlerPressEmoji}>
-          <img src={emoji} className="rcw-picker-icon" alt="" />
-        </button>
-        <button type="submit" className="rcw-send" onClick={handlerSendMessage}>
-          <img src={send} className="rcw-send-icon" alt={buttonAlt} />
-        </button>
+        <div className='rcw-sender-buttons'>
+          <button className='rcw-picker-btn' type="submit" onClick={handlerPressEmoji}>
+            <MoodSVGIcon className="rcw-picker-icon" />
+          </button>
+          <button type="submit" className="rcw-send" onClick={handlerSendMessage}>
+            <SendSVGIcon className="rcw-send-icon" />
+          </button>
+        </div>
       </div>
     </>
   );

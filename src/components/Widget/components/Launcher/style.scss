@@ -2,11 +2,11 @@
 @import "variables/colors";
 @import "animation";
 
-
 .rcw-launcher {
   @include animation(0, 0.5s, slide-in);
   align-self: flex-end;
-  background-color: $purple-1;
+  background-color: var(--rcw-primary-color);
+  fill: white; // Initial fill color
   border: 0;
   border-radius: 50%;
   box-shadow: 0px 2px 10px 1px $grey-3;
@@ -14,14 +14,21 @@
   margin-top: 10px;
   cursor: pointer;
   width: 58px;
-  color: black;
+  position: relative; // Ensure pseudo-elements position correctly
 
   &:focus {
     outline: none;
   }
+
   &:hover {
     color: $grey-3;
+
+    .rcw-open-launcher, 
+    .rcw-close-launcher {
+      fill: var(--rcw-primary-color);
+    }
   }
+
   &::before {
     content: "";
     position: absolute;
@@ -29,13 +36,13 @@
     left: 10px;
     width: 100%;
     height: 100%;
-    transition:
-      opacity 0.3s,
-      border 0.3s;
+    transition: opacity 0.3s, border 0.3s;
   }
+
   &:hover::before {
     opacity: 0;
   }
+
   &::after {
     content: "";
     position: absolute;
@@ -43,18 +50,15 @@
     left: 9px;
     width: 60px;
     height: 60px;
-    background-color: lighten($grey-1, 10%);
-    color: black;
+    background-color: lighten($grey-1, 90%);
     border-color: transparent;
     border-radius: 50%;
     transform: translate(-10px, -70px) scale(0.1);
     opacity: 0;
     z-index: -1;
-    transition:
-      transform 0.3s,
-      opacity 0.3s,
-      background-color 0.3s;
+    transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
   }
+
   &:hover::after {
     opacity: 1;
     transform-origin: 30px 30px;
@@ -62,12 +66,18 @@
   }
 }
 
+.rcw-open-launcher,
+.rcw-close-launcher {
+  width: 25px;
+  fill: white; // Initial fill color for both icons
+  transition: fill 0.3s; // Ensure a smooth transition of fill color
+}
+
 .rcw-open-launcher {
   @include animation(0, 0.5s, rotation-rl);
 }
 
 .rcw-close-launcher {
-  width: 20px;
   @include animation(0, 0.5s, rotation-lr);
 }
 

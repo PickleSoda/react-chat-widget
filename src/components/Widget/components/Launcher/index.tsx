@@ -4,7 +4,9 @@ import cn from 'classnames';
 import Badge from './components/Badge';
 import { GlobalState } from '../../../../store/types';
 import { setBadgeCount } from '../../../../store/actions';
-
+import {
+ChatBubbleSVGIcon,  CloseSVGIcon
+} from "@react-md/material-icons";
 import './style.scss';
 
 const openLauncher = require('../../../../../assets/launcher_button.svg') as string;
@@ -36,8 +38,10 @@ function Launcher({ toggle, chatId, openImg, closeImg, openLabel, closeLabel, sh
     <button type="button" className={cn('rcw-launcher', { 'rcw-hide-sm': showChat })} onClick={toggleChat} aria-controls={chatId}>
       {!showChat && showBadge && <Badge badge={badgeCount} />}
       {showChat ?
-        <img src={closeImg || close} className="rcw-close-launcher" alt={openLabel} /> :
-        <img src={openImg || openLauncher} className="rcw-open-launcher" alt={closeLabel} />
+
+        <CloseSVGIcon className="rcw-close-launcher" />
+        :
+        <ChatBubbleSVGIcon className="rcw-open-launcher" /> 
       }
     </button>
   );

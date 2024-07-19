@@ -1,7 +1,6 @@
 @import 'variables/colors';
 
 .rcw-sender {
-  background-color: $grey-2;
   border-radius: 0 0 10px 10px;
   height: max-content;
   max-height: 95px;
@@ -39,11 +38,6 @@
   }
 }
 
-.rcw-picker-icon {
-  margin-right: 10px;
-  opacity: 0.8;
-}
-
 .rcw-input {
   display: block;
   line-height: 30px;
@@ -66,18 +60,28 @@
 }
 
 .rcw-send, .rcw-picker-btn {
-  background: $grey-2;
   border: 0;
+  background-color: $white;
   cursor: pointer;
-
+  .rcw-picker-icon,
   .rcw-send-icon {
     height: 25px;
+    fill: $grey-0;
+
+    &:hover {
+      fill: var(--rcw-primary-color);
+    }
   }
 }
 
 .rcw-message-disable {
-  background-color: $grey-2;
   cursor: not-allowed;
+}
+
+.rcw-sender-buttons{
+    display: flex;
+    justify-content: space-between;
+
 }
 
 @media screen and (max-width: 800px)  {

@@ -23,7 +23,7 @@
   margin-left: auto;
 
   .rcw-message-text {
-    @include message-bubble($purple-2);
+    @include message-bubble(var(--rcw-primary-color));
 
     white-space: pre-wrap;
     word-wrap: break-word;

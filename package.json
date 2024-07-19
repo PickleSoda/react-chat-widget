@@ -1,10 +1,8 @@
 {
-  "name": "@ryaneewx/react-chat-widget",
-  "version": "3.4.1",
+  "name": "@picklesoda/react-chat-widget",
+  "version": "3.5.0",
   "description": "Chat web widget for React apps",
   "main": "lib/index.js",
-  "repository": "git@github.com:ryaneewx/react-chat-widget.git",
-  "author": "Ryan Ee <ryanee@gmail.com>",
   "license": "MIT",
   "types": "./lib/index.d.ts",
   "scripts": {
@@ -19,6 +17,9 @@
     "javascript"
   ],
   "dependencies": {
+    "@picklesoda/react-chat-widget": "^3.5.0",
+    "@react-md/icon": "^5.1.6",
+    "@react-md/material-icons": "^5.1.6",
     "classnames": "^2.3.2",
     "date-fns": "^2.30.0",
     "emoji-picker-react": "^4.5.2",
