@@ -22,3 +22,25 @@
     @include messages-container-fs;
   }
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent; 
+  opacity: 0.5;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $grey-3; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $grey-0; 
+}

@@ -9,7 +9,6 @@
   fill: white; // Initial fill color
   border: 0;
   border-radius: 50%;
-  box-shadow: 0px 2px 10px 1px $grey-3;
   height: 58px;
   margin-top: 10px;
   cursor: pointer;
@@ -69,8 +68,10 @@
 .rcw-open-launcher,
 .rcw-close-launcher {
   width: 25px;
+  height: 25px;
   fill: white; // Initial fill color for both icons
   transition: fill 0.3s; // Ensure a smooth transition of fill color
+  margin: auto;
 }
 
 .rcw-open-launcher {

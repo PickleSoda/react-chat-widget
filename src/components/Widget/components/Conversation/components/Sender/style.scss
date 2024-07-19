@@ -1,10 +1,8 @@
 @import 'variables/colors';
-
 .rcw-sender {
   border-radius: 0 0 10px 10px;
   height: max-content;
-  max-height: 95px;
-  min-height: 95px;
+  height: 110px;
   overflow: hidden;
   padding: 10px;
   position: relative;
@@ -66,6 +64,7 @@
   .rcw-picker-icon,
   .rcw-send-icon {
     height: 25px;
+    width: 25px;
     fill: $grey-0;
 
     &:hover {

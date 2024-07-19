@@ -1,5 +1,4 @@
-const close = require('../../../../../../../assets/clear-button.svg') as string;
-
+import {CloseSVGIcon} from "@react-md/material-icons";
 import './style.scss';
 
 type Props = {
@@ -15,7 +14,7 @@ function Header({ title, subtitle, toggleChat, showCloseButton, titleAvatar }: P
     <div className="rcw-header">
       {showCloseButton &&
         <button className="rcw-close-button" onClick={toggleChat}>
-          <img src={close} className="rcw-close" alt="close" />
+          <CloseSVGIcon className="rcw-close"/>
         </button>
       }
       <p className="rcw-title">
