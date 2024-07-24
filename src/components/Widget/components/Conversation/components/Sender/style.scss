@@ -3,8 +3,7 @@
   border-radius: 0 0 10px 10px;
   height: max-content;
   height: 110px;
-  overflow: hidden;
-  padding: 10px;
+  padding: 0 10px;
   position: relative;
 
   &.expand {
@@ -15,8 +14,8 @@
 .rcw-sender-divider{
   background-color: $grey-3;
   height: 1px;
-  margin: 0 0 0 20px;
-  width: calc(100% - 40px);
+  margin: 0 0 0 10px;
+  width: calc(100% - 20px);
 
 }
 .rcw-new-message {
